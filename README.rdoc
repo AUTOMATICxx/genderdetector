@@ -1,8 +1,8 @@
 = Gender Detector
 
-This is a fork of a sexist gem named (trigger warning) SexMachine by a scumbag named bmuller.
-Apart from the name change, this version is also changed in a way that it won't output discriminating results anymore.
-I am very excited to have this opportunity to improve the tech community by making it less unappealing to women.
+This is a fork of a gem named SexMachine by Brian Muller.
+
+This version is  changed in a way that it won't output discriminating results anymore.
 
 This gem uses the underlying data from the program "gender" by Jorg Michael (described {here}[http://www.autohotkey.com/community/viewtopic.php?t=22000]).  Its use is pretty straightforward:
 
