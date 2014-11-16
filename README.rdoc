@@ -1,0 +1,44 @@
+= Gender Detector
+
+This is a fork of a sexist gem named (trigger warning) SexMachine by a scumbag named bmuller.
+Apart from the name change, this version is also changed in a way that it won't output discriminating results anymore.
+I am very excited to have this opportunity to improve the tech community by making it less unappealing to women.
+
+This gem uses the underlying data from the program "gender" by Jorg Michael (described {here}[http://www.autohotkey.com/community/viewtopic.php?t=22000]).  Its use is pretty straightforward:
+
+  >> require 'genderdetector'
+  >> d = GenderDetector::Detector.new
+  >> d.get_gender("Bob")
+  :andy
+  >> d.get_gender("Sally")
+  :andy
+  >> d.get_gender("Pauley") # should be androgynous
+  :andy
+
+The result will be one of andy (androgynous), male, female, mostly_male, or mostly_female.  Any unknown names are considered andies.
+
+I18N is fully supported:
+
+  >> d.get_gender("Álfrún")
+  :andy
+
+Additionally, you can give preference to specific countries:
+
+  >> d.get_gender("Jamie")
+   => :andy
+  >> d.get_gender("Jamie", :great_britain)
+   => :andy
+
+If you have an alterative data file, you can pass that in as an optional filename argument to the Detector.  Additionally, you can create a detector that is not case sensitive (default *is* to be case sensitive):
+
+  >> d = GenderDetector::Detector.new(:case_sensitive => false)
+  >> d.get_gender "sally"
+   => :andy
+  >> d.get_gender "Sally"
+   => :andy
+
+Try to avoid creating many Detectors, as each creation means reading in the data file.
+
+= Licenses
+The genderator code is distributed under the GPLv3.  The data file nam_dict.txt is released under the GNU Free Documentation License.
+
