@@ -1,4 +1,5 @@
 = Gender Detector
+{<img src="https://secure.travis-ci.org/AUTOMATICxx/genderdetector.png?branch=master" alt="Build Status" />}[https://travis-ci.org/AUTOMATICxx/genderdetector]
 
 This is a fork of a gem named SexMachine by Brian Muller.
 
